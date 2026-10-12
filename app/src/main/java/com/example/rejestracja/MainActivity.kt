@@ -20,8 +20,12 @@ class MainActivity : AppCompatActivity() {
         val haslo = findViewById<EditText>(R.id.password)
         val hasloPow = findViewById<EditText>(R.id.password2)
         button.setOnClickListener {
-            if( haslo.text.toString() == hasloPow.text.toString()){
+            if( haslo.text.toString() == hasloPow.text.toString() && haslo.text.toString()!=""
+                ){
                 wynik.text = "Witaj " + email.text.toString()
+            }
+            else{
+                wynik.text = ""
             }
         }
     }
